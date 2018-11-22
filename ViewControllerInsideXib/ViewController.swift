@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBAction private func buttonTapped(_ sender: Any) {
+        
+        guard let xibViewController = UINib(nibName: "XibViewController", bundle: nil).instantiate(withOwner: self, options: nil).first as? XibViewController else { return }
+        
+        present(xibViewController, animated: true)
     }
-
-
 }
 
